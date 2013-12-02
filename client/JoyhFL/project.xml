@@ -20,7 +20,6 @@
 	<assets path="assets/audio" rename="audio" include="*.mp3" if="flash" />
 	<assets path="assets/audio" rename="audio" include="*.wav|*.ogg" unless="flash" />
 	<assets path="assets/font" rename="font" include="*.ttf" />
-	<assets path="assets/json" rename="json" include="*.json" />
 
 	<icon path="assets/HaxePunk.svg" />
 </project>
