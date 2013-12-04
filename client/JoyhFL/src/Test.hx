@@ -20,7 +20,7 @@ class Test
 		return _text;
 	}
 	
-	macro static function getFileContent( fileName : String )
+	macro public static function getFileContent( fileName : String )
 	{
 		var content = sys.io.File.getContent(fileName);
 		//var content = Date.now().toString();

@@ -5,6 +5,7 @@ import com.haxepunk.Scene;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.joyh.framework.entity.GamePlayer;
+import com.joyh.framework.JHP;
 import haxe.macro.Context;
 import haxe.macro.Expr;
 
@@ -29,7 +30,8 @@ class GameScene extends Scene
 		HXP.camera.x = 800;
 		HXP.camera.y = 1100;
 		
-		_background = new Backdrop("gfx/demo/battle.jpg", false, false);
+		//_background = new Backdrop("gfx/demo/battle.jpg", false, false);
+		_background = JHP.assets.createBackdrop("battle.jpg");
 		addGraphic(_background);
 		
 		var player:GamePlayer = new GamePlayer(1080, 1300);

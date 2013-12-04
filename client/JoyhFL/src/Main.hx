@@ -1,8 +1,11 @@
 import com.haxepunk.Engine;
 import com.haxepunk.HXP;
+import com.joyh.demo.command.server.SvrLoadBattleCommand;
 import com.joyh.demo.command.TestCommand;
 import com.joyh.demo.define.Widgets;
+import com.joyh.framework.asset.LoadAssetStep;
 import com.joyh.framework.JHP;
+import com.joyh.framework.process.StepProcess;
 import haxe.macro.Context;
 import openfl.Assets;
 import com.joyh.framework.scene.GameScene;
@@ -19,8 +22,7 @@ class Main extends Engine
 		UIBuilder.init();
 		UIBuilder.buildFn("assets/ui/demo.xml")();
 		
-		JHP.init([new TestCommand()]);
-		
+		JHP.init([new TestCommand(), new SvrLoadBattleCommand()]);
 		super();
 	}
 	
@@ -31,8 +33,7 @@ class Main extends Engine
 #end
 		HXP.screen.fixedScale = true;
 		
-		var ui = JHP.widgets.find(Widgets.Demo);
-		HXP.engine.addChild(ui);
+		JHP.widgets.open(Widgets.Demo);
 	}
 
 	public static function main()

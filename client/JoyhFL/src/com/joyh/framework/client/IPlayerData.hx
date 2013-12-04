@@ -6,5 +6,7 @@ package com.joyh.framework.client;
  */
 interface IPlayerData
 {
-	
+	var name:String;
+	var account:String;
+	var level:Int;
 }

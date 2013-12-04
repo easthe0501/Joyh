@@ -7,6 +7,8 @@ import com.haxepunk.HXP;
 import com.haxepunk.Mask;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import com.joyh.framework.JHP;
+import openfl.Assets;
 
 /**
  * ...
@@ -25,11 +27,12 @@ class GamePlayer extends Entity
 	{
 		super(x, y, graphic, mask);
 		
-		_spMove = new Spritemap("gfx/demo/m004.png", 48, 48);
+		//_spMove = new Spritemap(Assets.getBitmapData("gfx/demo/m004.png"), 48, 48, null, "gfx/demo/m004.png");
+		_spMove = JHP.assets.createSpritemap("m004.png", 48, 48);
 		_spMove.add("run", [4, 5], 5, true);
 		_spMove.add("idle", [8], 5, true);
 		
-		_spAttack = new Spritemap("gfx/demo/a004.png", 64, 64);
+		_spAttack = JHP.assets.createSpritemap("a004.png", 64, 64);
 		_spAttack.add("attack", [8, 9, 10, 11], 5, false);
 		
 		this.graphic = _spMove;

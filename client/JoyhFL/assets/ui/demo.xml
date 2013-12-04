@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Button id="$Widgets.Demo" text="'Start Game'" x="100" y="100"  skin:Paint-color="0x0000ff" on-click="$JHP.commands.run($Commands.Test);"  />
+<Button id="$Widgets.Demo" text="'Start Game'" x="100" y="100"  skin:Paint-color="0x0000ff" on-click="$JHP.runCommand($Commands.LoadBattle, 1);"  />
