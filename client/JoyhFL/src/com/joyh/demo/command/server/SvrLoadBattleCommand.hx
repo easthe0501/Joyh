@@ -18,19 +18,16 @@ class SvrLoadBattleCommand extends CommandBase
 		return Commands.LoadBattle;
 	}
 	
-	override public function run(args:Dynamic):Void 
+	override private function run(args:Dynamic):Void 
 	{
 		var id = cast(args, Int);
-		JHP.loadAccets(["battle.jpg", "a004.png", "d004.png", "m004.png"], onLoadStep, onLoadComplete);
+		JHP.call(onLoadComplete, ["battle.jpg", "a004.png", "d004.png", "m004.png"]);
 	}
 	
-	private function onLoadStep(currentStep:IStep, totalCount:Int):Void
-	{
-		
-	}
-	
-	private function onLoadComplete(totalCount:Int):Void
+	private function onLoadComplete():Void
 	{
 		HXP.scene = new GameScene();
+		JHP.alert("battle reloaded.");
+		//JHP.widgets.showLoading("test", 1, 12);
 	}
 }

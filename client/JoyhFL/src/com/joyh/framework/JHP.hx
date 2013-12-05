@@ -13,6 +13,7 @@ import haxe.Json;
 import haxe.macro.Context;
 import haxe.macro.Expr;
 import openfl.Assets;
+import ru.stablex.ui.widgets.Text;
 #if macro
 import sys.io.File;
 #end
@@ -68,22 +69,32 @@ class JHP
 		return _assets;
 	}
 	
-	public static function runCommand(id:Int, args:Dynamic = null):Bool
+	public static function alert(text:String):Void
 	{
-		return JHP.commands.run(id, args);
+		var uiAlert = _widgets.open("alert", false);
+		var uiText = uiAlert.getChildAs("text", Text);
+		uiText.text = text;
 	}
 	
-	public static function loadAccets(urls:Array<String>, stepCallback:Dynamic=null, completeCallback:Dynamic=null):Void
+	public static function call(func:Void->Void, assetUrls:Array<String>=null):Void
 	{
-		var steps:Array<IStep> = new Array();
-		for (url in urls)
+		if (assetUrls != null)
 		{
-			var step = new LoadAssetStep(url);
-			steps.push(step);
+			var process = _assets.createStepProcess(assetUrls);
+			process.onComplete = func;
+			process.goon();
 		}
-		var process = new StepProcess(steps);
-		process.onStep = stepCallback;
-		process.onComplete = completeCallback;
-		process.goon();
+		else
+			func();
+	}
+	
+	public static function exec(commandId:Int, args:Dynamic=null, assetUrls:Array<String>=null):Void
+	{
+		return call(function() { JHP.commands.exec(commandId, args); }, assetUrls);
+	}
+	
+	public static function open(widgetId:String, closeOther:Bool=true, assetUrls:Array<String> = null):Void
+	{
+		return call(function() { JHP.widgets.open(widgetId, closeOther); }, assetUrls);
 	}
 }

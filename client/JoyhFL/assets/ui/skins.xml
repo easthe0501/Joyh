@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Skins>
+    <!-- here goes `skinName`:`SkinClass` with list of skin properties -->
+    <red:Paint
+        color       = "0x550000"
+        borderColor = "0xFF0000"
+        border      = "8"
+    />
+    <!-- another skin preset -->
+    <background:Tile
+        src         = "'assets/img/background.jpg'"
+        borderColor = "0x00FF00"
+        borderAlpha = "0.5"
+        border      = "2"
+    />
+    <!-- and another one -->
+    <winxp:Slice9
+        src   = "'assets/gfx/demo/battle.jpg'"
+        slice = "[5, 10, 32, 48]"
+    />
+    <!-- and so on -->
+    <!-- ... -->
+</Skins>

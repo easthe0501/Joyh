@@ -10,13 +10,20 @@ class StepProcess
 	private var _steps:Array<IStep>;
 	private var _index:Int = 0;
 	
+	public var onStep:IStep->Int->Void;
+	public var onComplete:Void->Void;
+	
 	public function new(steps:Array<IStep>) 
 	{
 		_steps = steps;
 		if(_steps == null || _steps.length == 0)
 			throw new Error("Empty process.");
-		for(step in _steps)
+		var i = 0;
+		for (step in _steps)
+		{
+			step.index = i++;
 			step.process = this;
+		}
 	}
 			
 	public function getPreviousStep():IStep
@@ -48,26 +55,22 @@ class StepProcess
 		if(preStep != null)
 			preStep.dispose();
 		var curStep:IStep = getCurrentStep();
+		if(onStep != null)
+			onStep(curStep, _steps.length);
 		if(curStep != null)
 		{
-			onStep(getCurrentStep(), _steps.length);
 			_index++;
 			curStep.run();
 		}
 		else if(_index >= _steps.length)
 		{
-			onComplete(_steps.length);
+			if(onComplete != null)
+				onComplete();
 			_steps = null;
 		}
-	}
-	
-	dynamic public function onStep(currentStep:IStep, totalCount:Int):Void
-	{
-		
-	}
-	
-	dynamic public function onComplete(totalCount:Int):Void
-	{
-		
+		for (i in 0...5000000)
+		{
+			
+		}
 	}
 }

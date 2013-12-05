@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VBox id="'loading'" w="300" h="100" left="$Lib.current.stage.stageWidth/2" top="$Lib.current.stage.stageHeight/2" skin:Paint-color="0xbbbbbb" skin:Paint-border="2" padding="10" childPadding="5">
+
+    <!-- Here we use argument to set text for text field -->
+    <Text name="'content'" />
+	<Progress name="'progress'" w="280" h="20" left="5" skin:Paint-color="0x222222" skin:Paint-border="1" bar-skin:Paint-color="0x0000ff" />
+    <Text name="'step'"  />
+</VBox>

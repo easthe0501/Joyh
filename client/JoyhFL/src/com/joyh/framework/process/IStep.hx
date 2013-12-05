@@ -7,6 +7,7 @@ import com.joyh.framework.process.StepProcess;
  */
 interface IStep
 {
+	var index:Int;
 	var process:StepProcess;
 	var key(get, null):String;
 	function run():Void;

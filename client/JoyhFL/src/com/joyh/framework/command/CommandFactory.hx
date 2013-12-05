@@ -20,7 +20,7 @@ class CommandFactory
 		}
 	}
 	
-	public function findAll():Array<ICommand>
+	public function all():Array<ICommand>
 	{
 		return Lambda.array(_hash);
 	}
@@ -30,14 +30,11 @@ class CommandFactory
 		return _hash.get(id);
 	}
 	
-	public function run(id:Int, args:Dynamic = null):Bool
+	public function exec(id:Int, args:Dynamic = null):Bool
 	{
 		var command = find(id);
 		if (command != null)
-		{
-			command.run(args);
-			return true;
-		}
+			return command.exec(args);
 		return false;
 	}
 }

@@ -8,5 +8,5 @@ import haxe.ds.HashMap.HashMap;
 interface ICommand
 {
 	var id(get, null):Int;
-	function run(args:Dynamic):Void;
+	function exec(args:Dynamic):Bool;
 }

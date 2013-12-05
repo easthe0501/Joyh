@@ -14,14 +14,28 @@ class CommandBase implements ICommand
 	
 	/* INTERFACE com.joyh.framework.command.ICommand */
 	
-	public var id(get, null):Int;
-	
+	public var id(get, null):Int;	
 	private function get_id():Int
 	{
 		return 10;
 	}
 	
-	public function run(args:Dynamic):Void 
+	public function exec(args:Dynamic):Bool
+	{
+		if (ready(args))
+		{
+			run(args);
+			return true;
+		}
+		return false;
+	}
+	
+	private function ready(args:Dynamic):Bool
+	{
+		return true;
+	}
+	
+	private function run(args:Dynamic):Void 
 	{
 		
 	}

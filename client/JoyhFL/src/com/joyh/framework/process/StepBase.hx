@@ -12,6 +12,7 @@ class StepBase
 {
 	private var _key:String;
 	private var _retryCount:Int = 0;	
+	public var index:Int;
 	public var process:StepProcess;
 
 	public function new() 

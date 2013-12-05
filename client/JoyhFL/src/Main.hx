@@ -11,6 +11,7 @@ import openfl.Assets;
 import com.joyh.framework.scene.GameScene;
 import ru.stablex.ui.UIBuilder;
 import ru.stablex.ui.widgets.Button;
+import ru.stablex.ui.widgets.Text;
 
 class Main extends Engine
 {	
@@ -19,8 +20,13 @@ class Main extends Engine
 		UIBuilder.regClass("com.joyh.framework.JHP");
 		UIBuilder.regClass("com.joyh.demo.define.Commands");
 		UIBuilder.regClass("com.joyh.demo.define.Widgets");
+		
 		UIBuilder.init();
-		UIBuilder.buildFn("assets/ui/demo.xml")();
+		UIBuilder.regSkins("assets/ui/skins.xml");
+		
+		UIBuilder.buildFn("assets/ui/widgets/demo.xml")();
+		UIBuilder.buildFn("assets/ui/widgets/alert.xml")();
+		UIBuilder.buildFn("assets/ui/widgets/loading.xml")();
 		
 		JHP.init([new TestCommand(), new SvrLoadBattleCommand()]);
 		super();
@@ -33,7 +39,9 @@ class Main extends Engine
 #end
 		HXP.screen.fixedScale = true;
 		
-		JHP.widgets.open(Widgets.Demo);
+		var uiDemo = JHP.widgets.open(Widgets.Demo);
+		JHP.alert("xxyyzz");
+		//JHP.widgets.showLoading("content", 12, 18);
 	}
 
 	public static function main()

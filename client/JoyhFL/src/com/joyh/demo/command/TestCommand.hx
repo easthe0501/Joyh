@@ -19,7 +19,7 @@ class TestCommand extends CommandBase
 		return Commands.Test;
 	}
 	
-	override public function run(args:Dynamic):Void 
+	override private function run(args:Dynamic):Void 
 	{
 		if(!Std.is(HXP.scene, GameScene))
 			HXP.scene = new GameScene();

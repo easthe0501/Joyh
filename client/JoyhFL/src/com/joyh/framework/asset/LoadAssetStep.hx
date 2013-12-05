@@ -34,6 +34,7 @@ class LoadAssetStep extends StepBase implements IStep
 	
 	public function run():Void
 	{
+		//_loader.load(_request);
 		if(JHP.assets.get(_key) == null)
 			_loader.load(_request);
 		else
