@@ -1,15 +1,15 @@
 package com.joyh.framework.scene;
 
-import com.haxepunk.Scene;
-
 /**
  * ...
  * @author hd
  */
-class BattleScene extends Scene
+class SceneFactory
 {
+
 	public function new() 
 	{
-		super();		
-	}	
+		
+	}
+	
 }
