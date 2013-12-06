@@ -27,15 +27,17 @@ class JHP
 	private static var _client:GameClient;
 	private static var _settings:SettingFacade;
 	private static var _widgets:WidgetFacade;
-	private static var _commands:CommandFactory;
+	private static var _clientCommands:CommandFactory;
+	private static var _serverCommands:CommandFactory;
 	private static var _assets:AssetFactory;
 	
-	public static function init(commands:Array<ICommand>):Void
+	public static function init(cliCommands:Array<ICommand>, svrCommands:Array<ICommand>):Void
 	{
 		_client = new GameClient();
 		_settings = SettingFacade.create();
 		_widgets = new WidgetFacade();
-		_commands = new CommandFactory(commands);
+		_clientCommands = new CommandFactory(cliCommands);
+		_serverCommands = new CommandFactory(svrCommands);
 		_assets = new AssetFactory();
 	}	
 	
@@ -57,10 +59,16 @@ class JHP
 		return _widgets;
 	}
 	
-	public static var commands(get, null):CommandFactory;
-	private static inline function get_commands():CommandFactory
+	public static var clientCommands(get, null):CommandFactory;
+	private static inline function get_clientCommands():CommandFactory
 	{
-		return _commands;
+		return _clientCommands;
+	}
+	
+	public static var serverCommands(get, null):CommandFactory;
+	private static inline function get_serverCommands():CommandFactory
+	{
+		return _serverCommands;
 	}
 	
 	public static var assets(get, null):AssetFactory;
@@ -90,10 +98,10 @@ class JHP
 	
 	public static function exec(commandId:Int, args:Dynamic=null, assetUrls:Array<String>=null):Void
 	{
-		return call(function() { JHP.commands.exec(commandId, args); }, assetUrls);
+		return call(function() { JHP.clientCommands.exec(commandId, args); }, assetUrls);
 	}
 	
-	public static function open(widgetId:String, closeOther:Bool=true, assetUrls:Array<String> = null):Void
+	public static function open(widgetId:String, closeOther:Bool=true, assetUrls:Array<String>=null):Void
 	{
 		return call(function() { JHP.widgets.open(widgetId, closeOther); }, assetUrls);
 	}

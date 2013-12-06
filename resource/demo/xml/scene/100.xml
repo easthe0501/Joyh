@@ -1,1 +1,8 @@
-<Scene id="100">
+<Scene id="100" backdrop="url:image/s100.jpg" width="1536" height="1920">
+	<Player movable="true" skin="default">
+		<Spritemap src="url:image/m004.png" width="48" height="48">
+			<Animation name="run" frames="4,5" rate="5" loop="false" />
+			<Animation name="idle" frames="8" rate="5" loop="false" />
+		</Spritemap>
+	</Player>
+</Scene>

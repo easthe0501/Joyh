@@ -68,9 +68,5 @@ class StepProcess
 				onComplete();
 			_steps = null;
 		}
-		for (i in 0...5000000)
-		{
-			
-		}
 	}
 }

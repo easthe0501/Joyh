@@ -1,14 +1,13 @@
 import com.haxepunk.Engine;
 import com.haxepunk.HXP;
+import com.joyh.demo.command.client.CliLoadBattleCommand;
 import com.joyh.demo.command.server.SvrLoadBattleCommand;
-import com.joyh.demo.command.TestCommand;
 import com.joyh.demo.define.Widgets;
 import com.joyh.framework.asset.LoadAssetStep;
 import com.joyh.framework.JHP;
 import com.joyh.framework.process.StepProcess;
 import haxe.macro.Context;
 import openfl.Assets;
-import com.joyh.framework.scene.GameScene;
 import ru.stablex.ui.UIBuilder;
 import ru.stablex.ui.widgets.Button;
 import ru.stablex.ui.widgets.Text;
@@ -28,7 +27,7 @@ class Main extends Engine
 		UIBuilder.buildFn("assets/ui/widgets/alert.xml")();
 		UIBuilder.buildFn("assets/ui/widgets/loading.xml")();
 		
-		JHP.init([new TestCommand(), new SvrLoadBattleCommand()]);
+		JHP.init([new CliLoadBattleCommand()], [new SvrLoadBattleCommand()]);
 		super();
 	}
 	
@@ -40,7 +39,7 @@ class Main extends Engine
 		HXP.screen.fixedScale = true;
 		
 		var uiDemo = JHP.widgets.open(Widgets.Demo);
-		JHP.alert("xxyyzz");
+		//JHP.alert("xxyyzz");
 		//JHP.widgets.showLoading("content", 12, 18);
 	}
 

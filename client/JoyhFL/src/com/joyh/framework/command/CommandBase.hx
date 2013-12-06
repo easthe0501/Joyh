@@ -38,6 +38,5 @@ class CommandBase implements ICommand
 	private function run(args:Dynamic):Void 
 	{
 		
-	}
-	
+	}	
 }
