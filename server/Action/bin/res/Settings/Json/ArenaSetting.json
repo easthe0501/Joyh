@@ -1,0 +1,40 @@
+{
+  UnlockLevel : 20,
+  WinnerPrize : {Repute:20},
+  LoserPrize : {Repute:10},
+  WeekRankPrizes : [
+  	{
+  		LowestRank : 1,
+  		Prize : {"Title":"封神第一名",Gold:100,Money:500000,Repute:5000}
+  	},
+  	{
+  		LowestRank : 2,
+  		Prize : {"Title":"封神第二名",Gold:50,Money:400000,Repute:3000}
+  	},
+  	{
+  		LowestRank : 3,
+  		Prize : {"Title":"封神第三名",Gold:30,Money:300000,Repute:2000}
+  	},
+  	{
+  		LowestRank : 10,
+  		Prize : {"Title":"封神前十名",Gold:10,Money:200000,Repute:1000}
+  	},
+  	{
+  		LowestRank : 100,
+  		Prize : {"Title":"封神前100",Money:100000,Repute:800}
+  	},
+  	{
+  		LowestRank : 200,
+  		Prize : {"Title":"封神前200",Money:80000,Repute:700}
+  	},
+  	{
+  		LowestRank : 400,
+  		Prize : {"Title":"封神前400",Money:50000,Repute:500}
+  	},
+  	{
+  		LowestRank : 60000,
+  		Prize : {"Title":"封神挑战",Money:20000,Repute:100}
+  	}
+  ],
+  RefreshCost : 20
+}

@@ -1,0 +1,8 @@
+{
+	CapacityExpandSize : 36,
+    ItemsStackLimit : 99,
+	BagMaxPage : 10,
+	ExpandBagPageCosts : [100, 200, 400, 800],
+	ItemSellRate : 0.8,
+	ExpandBagVip : 4
+}

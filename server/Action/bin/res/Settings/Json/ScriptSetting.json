@@ -1,0 +1,3 @@
+{
+	OnCreateRole : "Player->getItems(60001,99)->getItems(60002,99)->getItems(60003,99)->getItems(60004,99)->getItems(60005,99)->getItems(60006,99)->getItems(60007,99)->getItems(60008,99)->getItems(60009,99)->getItems(60010,99)->getItems(60011,99)->getItems(60012,99)->getItems(60013,99)->getItems(60014,99)->getItems(61001,1)->Data->Level=1->Skin=1->Money=10000->Gold=200->Permission.Copies->invoke(Add,110001)"
+}

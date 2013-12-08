@@ -1,0 +1,13 @@
+{
+	NameMaxLength : 6,
+	InitMemberMaxCount : 25,
+	PlusMemberMaxCount : 1,
+	ManagerMaxCount : 3,
+	LogMaxCount : 20,
+	CreateCostMoney : 20000,
+	CreateNeedLevel : 10,
+	ImpeachNeedDay : 7,
+	GuildsAPage : 10,
+	GuildMaxLevel : 10,
+	DailyContributeCount : 1
+}

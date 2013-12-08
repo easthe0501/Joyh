@@ -1,0 +1,50 @@
+{
+	ContinuePrize : [
+		{
+			Index:1, 
+			Prize: {Gold: 10, Money: 10, Energy:10, Repute:10, Exp:10, Items: []}
+		},
+		{
+			Index:2, 
+			Prize: {Gold: 100, Money: 100, Energy:10, Repute:100, Exp:100, Items: []}
+		},
+		{
+			Index:3, 
+			Prize: {Gold: 1000, Money: 1000, Energy:10, Repute:1000, Exp:1000, Items: []}
+		},
+		{
+			Index:4, 
+			Prize: {Gold: 10000, Money: 10000, Energy:10, Repute:10000, Exp:10000, Items: []}
+		},
+		{
+			Index:5, 
+			Prize: {Gold: 100000, Money: 100000, Energy:10, Repute:100000, Exp:100000, Items: []}
+		},
+		{
+			Index:6, 
+			Prize: {Gold: 1000000, Money: 1000000, Energy:10, Repute:1000000, Exp:1000000, Items: []}
+		}
+	],
+	SumPrize : [
+		{
+			Index:1, 
+			Prize: {Gold: 10, Money: 10, Energy:10, Repute:10, Exp:10, Items: []}
+		},
+		{
+			Index:2, 
+			Prize: {Gold: 100, Money: 100, Energy:10, Repute:100, Exp:100, Items: []}
+		},
+		{
+			Index:3, 
+			Prize: {Gold: 1000, Money: 1000, Energy:10, Repute:1000, Exp:1000, Items: []}
+		},
+		{
+			Index:4, 
+			Prize: {Gold: 10000, Money: 10000, Energy:10, Repute:10000, Exp:10000, Items: []}
+		},
+		{
+			Index:5, 
+			Prize: {Gold: 100000, Money: 100000, Energy:10, Repute:100000, Exp:100000, Items: []}
+		}
+	]
+}

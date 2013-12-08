@@ -1,0 +1,6 @@
+[
+	{Id:0, Hit:5, Dodge:5, Crack:5, Block:5, Crit:5, Tenacity:5},
+    {Id:1, Hit:15, Dodge:0, Crack:0, Block:0, Crit:15, Tenacity:0},
+	{Id:2, Hit:0, Dodge:0, Crack:0, Block:15, Crit:0, Tenacity:15},
+	{Id:3, Hit:0, Dodge:15, Crack:15, Block:0, Crit:0, Tenacity:0}
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "Id": 120001,
+		"Grids": [
+			{Type:1,Data:-2}, {Type:1,Data:3}, {Type:2,Data:100001}, {Type:4, Data:"{Repute:50}"}
+		]
+    }
+]

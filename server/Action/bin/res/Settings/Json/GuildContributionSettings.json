@@ -1,0 +1,9 @@
+[
+	{Id:2411,Vip:0, CostMoney:1000, CostGold:0, IncomeContribution:1390, IncomeRepute:50},
+	{Id:2412,Vip:1, CostMoney:0, CostGold:10, IncomeContribution:2781, IncomeRepute:200},
+	{Id:2413,Vip:2, CostMoney:0, CostGold:50, IncomeContribution:3605, IncomeRepute:400},
+	{Id:2422,Vip:4, CostMoney:0, CostGold:100, IncomeContribution:4635, IncomeRepute:650},
+	{Id:2424,Vip:6, CostMoney:0, CostGold:200, IncomeContribution:6695, IncomeRepute:1000},
+	{Id:2426,Vip:8, CostMoney:0, CostGold:500, IncomeContribution:12875, IncomeRepute:2000},
+	{Id:2428,Vip:10, CostMoney:0, CostGold:1000, IncomeContribution:25750, IncomeRepute:3500}
+]

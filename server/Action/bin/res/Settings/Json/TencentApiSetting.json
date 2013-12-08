@@ -1,0 +1,18 @@
+{
+	IP: "openapi.tencentyun.com",
+	Encoder: "utf-8",
+	AppId: "100716047",
+	AppKey: "b9569f94ab2fbab3b543fdb6b4143451",
+	User_get_info: {
+		Api: "v3/user/get_info"
+	},
+	Pay_buy_goods: {
+		Api: "v3/pay/buy_goods",
+		PayItem: "1*100*1",
+		GoodsMeta: "100元宝*用于商城内消费的货币",
+		GoodsUrl: "http://app100716047.imgcache.qzoneapp.com/app100716047/app/image/gold.png"
+	},
+	Pay_confirm_delivery: {
+		Api: "v3/pay/confirm_delivery"
+	}
+}

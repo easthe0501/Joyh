@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCB49407-1470-44C8-8D9B-AABA921FF088}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Action.Model</RootNamespace>
+    <AssemblyName>Action.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=1.6.0.4624, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\MongoDB\CSharpDriver-1.6.0.4624\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.6.0.4624, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\MongoDB\CSharpDriver-1.6.0.4624\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.594, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\protobuf-net\now\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketBase, Version=1.4.5.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\SuperSocket\1.4\SuperSocket.SocketBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Calc\IBattleCalculator.cs" />
+    <Compile Include="Calc\RpgBattleCalculator.cs" />
+    <Compile Include="Calc\SlgBattleCalculator.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="DB\ArenaLog.cs" />
+    <Compile Include="DB\PayOrder.cs" />
+    <Compile Include="DB\RandomTask.cs" />
+    <Compile Include="DB\SignIn.cs" />
+    <Compile Include="Facade\CommonFacade.cs" />
+    <Compile Include="Module\IChatModule.cs" />
+    <Compile Include="Module\ICopyModule.cs" />
+    <Compile Include="Module\IGlobalModule.cs" />
+    <Compile Include="Module\IGuildModule.cs" />
+    <Compile Include="Module\IHeroModule.cs" />
+    <Compile Include="Module\IHuntModule.cs" />
+    <Compile Include="Net\_ArenaArgs.cs" />
+    <Compile Include="Net\_GuildArgs.cs" />
+    <Compile Include="Net\_RechargeArgs.cs" />
+    <Compile Include="Net\_ShopArgs.cs" />
+    <Compile Include="Settings\ArenaSetting.cs" />
+    <Compile Include="Settings\CommandSetting.cs" />
+    <Compile Include="Settings\FixedPrizeSetting.cs" />
+    <Compile Include="Settings\TencentApiSetting.cs" />
+    <Compile Include="Settings\CopyToolSetting.cs" />
+    <Compile Include="Settings\EatExpSetting.cs" />
+    <Compile Include="Settings\GoodsSetting.cs" />
+    <Compile Include="Settings\GuildContributeSetting.cs" />
+    <Compile Include="Settings\GuildLevelSetting.cs" />
+    <Compile Include="Settings\GuildSetting.cs" />
+    <Compile Include="Settings\HeroTrainSetting.cs" />
+    <Compile Include="Settings\MonsterJobSetting.cs" />
+    <Compile Include="Settings\SignPrizeSetting.cs" />
+    <Compile Include="Settings\TencentPaySetting.cs" />
+    <Compile Include="Settings\TestUserSetting.cs" />
+    <Compile Include="Settings\UpdateHomeSetting.cs" />
+    <Compile Include="Settings\VipSetting.cs" />
+    <Compile Include="Util\BattleArena.cs" />
+    <Compile Include="Util\Box.cs" />
+    <Compile Include="DB\Guild.cs" />
+    <Compile Include="DB\GuildMember.cs" />
+    <Compile Include="DB\Permission.cs" />
+    <Compile Include="DB\SoulWarehouse.cs" />
+    <Compile Include="DB\TaskProgress.cs" />
+    <Compile Include="Module\ITaskModule.cs" />
+    <Compile Include="Net\_CopyArgs.cs" />
+    <Compile Include="Net\_HuntArgs.cs" />
+    <Compile Include="Net\_TaskArgs.cs" />
+    <Compile Include="Settings\HuntSetting.cs" />
+    <Compile Include="Settings\TaskSetting.cs" />
+    <Compile Include="Util\Card.cs" />
+    <Compile Include="Util\Copy.cs" />
+    <Compile Include="DB\HeroShop.cs" />
+    <Compile Include="Util\BattleGroup.cs" />
+    <Compile Include="Util\BattleReportEx.cs" />
+    <Compile Include="Util\Buff.cs" />
+    <Compile Include="DB\Equip.cs" />
+    <Compile Include="DB\IdGen.cs" />
+    <Compile Include="DB\OfflineCache.cs" />
+    <Compile Include="DB\PlayerSummary.cs" />
+    <Compile Include="Util\BattleFighter.cs" />
+    <Compile Include="Util\BuffGroup.cs" />
+    <Compile Include="Util\CopyGrid.cs" />
+    <Compile Include="Util\CopyMember.cs" />
+    <Compile Include="Util\Meeting.cs" />
+    <Compile Include="Util\Monster.cs" />
+    <Compile Include="Util\PlayerTemp.cs" />
+    <Compile Include="Util\Prize.cs" />
+    <Compile Include="DB\Soul.cs" />
+    <Compile Include="DB\World.cs" />
+    <Compile Include="Facade\RandomFacade.cs" />
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="Module\IBagModule.cs" />
+    <Compile Include="Module\IBattleModule.cs" />
+    <Compile Include="Module\IPrizeModule.cs" />
+    <Compile Include="Module\IRoleModule.cs" />
+    <Compile Include="Net\CommonArgs.cs" />
+    <Compile Include="Net\_BuffArgs.cs" />
+    <Compile Include="Net\_EquipArgs.cs" />
+    <Compile Include="Net\_HeroArgs.cs" />
+    <Compile Include="Net\_PrizeArgs.cs" />
+    <Compile Include="Facade\DatabaseFacade.cs" />
+    <Compile Include="DB\Account.cs" />
+    <Compile Include="DB\Bag.cs" />
+    <Compile Include="DB\BsonClass.cs" />
+    <Compile Include="DB\Building.cs" />
+    <Compile Include="DB\CountHistory.cs" />
+    <Compile Include="DB\Entity.cs" />
+    <Compile Include="DB\Hero.cs" />
+    <Compile Include="DB\Home.cs" />
+    <Compile Include="DB\Snapshot.cs" />
+    <Compile Include="DB\Item.cs" />
+    <Compile Include="DB\Log.cs" />
+    <Compile Include="DB\Player.cs" />
+    <Compile Include="DB\Unit.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Net\_BagArgs.cs" />
+    <Compile Include="Net\_ChatArgs.cs" />
+    <Compile Include="Net\_FriendArgs.cs" />
+    <Compile Include="Net\_HomeArgs.cs" />
+    <Compile Include="Net\_RoleArgs.cs" />
+    <Compile Include="Net\_ScriptArgs.cs" />
+    <Compile Include="Pairs.cs" />
+    <Compile Include="Facade\APF.cs" />
+    <Compile Include="Facade\FactoryFacade.cs" />
+    <Compile Include="Settings\BagSetting.cs" />
+    <Compile Include="Settings\BattleSetting.cs" />
+    <Compile Include="Settings\BuildingSetting.cs" />
+    <Compile Include="Settings\ChatSetting.cs" />
+    <Compile Include="Settings\CopySetting.cs" />
+    <Compile Include="Settings\EquipCompoundSetting.cs" />
+    <Compile Include="Settings\EquipSetting.cs" />
+    <Compile Include="Settings\EquipStrenthenSetting.cs" />
+    <Compile Include="Settings\HeroSetting.cs" />
+    <Compile Include="Settings\HomeSetting.cs" />
+    <Compile Include="Settings\IExternalChannel.cs" />
+    <Compile Include="Settings\JobSetting.cs" />
+    <Compile Include="Settings\JsonSettings.cs" />
+    <Compile Include="Net\BattleReport.cs" />
+    <Compile Include="Net\_LoginArgs.cs" />
+    <Compile Include="Net\_SceneArgs.cs" />
+    <Compile Include="Net\_WarArgs.cs" />
+    <Compile Include="Settings\ItemSetting.cs" />
+    <Compile Include="Settings\LevelSetting.cs" />
+    <Compile Include="Settings\MeetingSetting.cs" />
+    <Compile Include="Settings\RoleSetting.cs" />
+    <Compile Include="Settings\ScriptSetting.cs" />
+    <Compile Include="Facade\SettingsFacade.cs" />
+    <Compile Include="Settings\SkillSetting.cs" />
+    <Compile Include="Settings\SoulSetting.cs" />
+    <Compile Include="StructBsonSerializer.cs" />
+    <Compile Include="CommandEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Action.Core\Action.Core.csproj">
+      <Project>{234CF252-B969-48A9-B3E9-170A08EDC256}</Project>
+      <Name>Action.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Action.DataAccess\Action.DataAccess.csproj">
+      <Project>{F622118C-38C5-4D06-929E-46A5DADEF618}</Project>
+      <Name>Action.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Action.Engine\Action.Engine.csproj">
+      <Project>{0348CA5E-C60B-424D-999C-55A153A637E1}</Project>
+      <Name>Action.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Action.Utility\Action.Utility.csproj">
+      <Project>{8F6EEE8F-FA80-4A0F-A9AB-80E4D0BE7A71}</Project>
+      <Name>Action.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

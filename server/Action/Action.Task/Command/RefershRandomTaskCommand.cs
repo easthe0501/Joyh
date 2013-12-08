@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Action.Engine;
+using Action.Model;
+
+namespace Action.Task.Command
+{
+    [GameCommand((int)CommandEnum.RefreshRandomTask)]
+    public class RefershRandomTaskCommand : GameCommand
+    {
+        protected override void Run(GameSession session)
+        {
+            var player = session.Player.Data.AsDbPlayer();
+            var gold = APF.Settings.Role.RefreshRandomTaskCost;
+            if (player.Gold < gold)
+            {
+                session.SendError(ErrorCode.GoldNotEnough);
+                return;
+            }
+            player.Gold -= gold;
+            session.SendResponse((int)CommandEnum.RefreshGold, player.Gold);
+
+            player.RefreshRandomTask();
+            session.UpdateRandomTask(player.RandomTask.ToArgs());
+        }
+    }
+}
