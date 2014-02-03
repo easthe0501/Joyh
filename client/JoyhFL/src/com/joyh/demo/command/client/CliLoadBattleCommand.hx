@@ -21,7 +21,7 @@ class CliLoadBattleCommand extends CommandBase
 	override private function run(args:Dynamic):Void 
 	{
 		var id = cast(args, Int);
-		JHP.call(onLoadComplete, ["image/battle.jpg", "image/a004.png", "image/m004.png", "image/d004.png"]);
+		JHP.call(onLoadComplete, ["battle.jpg", "a004.png", "m004.png", "d004.png"]);
 	}
 	
 	private function onLoadComplete():Void

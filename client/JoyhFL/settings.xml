@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <settings>
-	<cdn root="http://localhost:81/" />
+	<cdn root="http://localhost/demo/" />
 </settings>

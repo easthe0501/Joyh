@@ -28,11 +28,11 @@ class DemoPlayer extends Entity
 		super(x, y, graphic, mask);
 		
 		//_spMove = new Spritemap(Assets.getBitmapData("gfx/demo/m004.png"), 48, 48, null, "gfx/demo/m004.png");
-		_spMove = JHP.assets.createSpritemap("image/m004.png", 48, 48);
+		_spMove = JHP.assets.createSpritemap("m004.png", 48, 48);
 		_spMove.add("run", [4, 5], 5, true);
 		_spMove.add("idle", [8], 5, false);
 		
-		_spAttack = JHP.assets.createSpritemap("image/a004.png", 64, 64);
+		_spAttack = JHP.assets.createSpritemap("a004.png", 64, 64);
 		_spAttack.add("attack", [8, 9, 10, 11], 5, false);
 		
 		this.graphic = _spMove;

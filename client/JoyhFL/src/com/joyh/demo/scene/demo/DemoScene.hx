@@ -31,7 +31,7 @@ class DemoScene extends Scene
 		HXP.camera.y = 1100;
 		
 		//_background = new Backdrop("gfx/demo/battle.jpg", false, false);
-		_background = JHP.assets.createBackdrop("image/battle.jpg");
+		_background = JHP.assets.createBackdrop("battle.jpg");
 		addGraphic(_background);
 		
 		var player:DemoPlayer = new DemoPlayer(1080, 1300);
